@@ -1,7 +1,7 @@
 # Weather App
 
 ## Introduction
-This is a simple weather app built using React. It allows users to fetch weather information based on either the city name or their current location. The app utilizes the OpenWeatherMap API to retrieve weather data.
+This is a weather app built using React. It allows users to fetch weather information based on either the city name or their current location. The app utilizes the OpenWeatherMap API to retrieve weather data.
 
 ## Features
 - Fetch weather information based on city name or current location

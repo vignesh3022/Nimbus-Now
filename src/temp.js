@@ -9,7 +9,6 @@ import "react-toastify/dist/ReactToastify.css";
 import Navbar from './Navbar';
 import { motion, AnimatePresence } from "framer-motion";
 import Tilt from 'react-parallax-tilt';
-import Notification from './components/Notification';
 
 const App = () => {
   const [latitude, setLatitude] = useState("");
@@ -26,7 +25,6 @@ const App = () => {
 
   const [mode, setMode] = useState('light'); //Whether darkmode is enabled or not
   const darkTheme = localStorage.getItem("theme");
-  const [showNote, setShowNote] = useState(true);
 
   const toggleMode=()=>{
     if(mode==='light'){
@@ -159,15 +157,6 @@ const App = () => {
     }
   }, [datas]);
 
-  // Hide the note after 5 seconds
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowNote(false);
-    }, 5000);
-
-    return () => clearTimeout(timer);
-  }, []);
-
   const cardVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { 
@@ -185,7 +174,7 @@ const App = () => {
           : 'bg-gradient-to-br from-indigo-500/90 via-purple-500/90 to-pink-500/90'
       }`}>
         <Navbar mode={mode} toggleMode={toggleMode} />
-        <Notification show={showNote} />
+        
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -220,7 +209,7 @@ const App = () => {
                     "0 0 151px #bc13fe"
                   ]
                 }}
-                transition={{ duration: 2, }}
+                transition={{ duration: 2, repeat: Infinity, repeatType: "reverse" }}
               >
                 Weather Forecast
               </motion.h1>
@@ -307,7 +296,7 @@ const App = () => {
                           whileTap={{ scale: 0.95 }}
                         >
                           <Tilt scale={1.1} tiltMaxAngleX={15} tiltMaxAngleY={15}>
-                            <div className="py-8 rounded-2xl bg-white/10 backdrop-blur-md hover:bg-white/20 transition-all duration-300 h-full">
+                            <div className="p-6 rounded-2xl bg-white/10 backdrop-blur-md hover:bg-white/20 transition-all duration-300 h-full">
                               <div className="text-center space-y-4">
                                 <motion.div
                                   animate={{ 

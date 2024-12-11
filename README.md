@@ -6,8 +6,8 @@ This is a simple and user-friendly weather application built using **React**. Th
 ---
 
 ## **Features**
-- Fetch weather information based on **city name** or **current location**.
-- Display temperature in both **Celsius** and **Fahrenheit**.
+- Fetch weather information based on **city name** and **country name**.
+- Display temperature in both **Celsius**.
 - Show additional weather details like:
   - **Humidity**
   - **Wind Speed**
@@ -63,7 +63,7 @@ npm start
 
 ## Website
 
-Check out the deployed website at [[https://vigneshthipparthi-portfolio.vercel.app/](https://our-weather-app.vercel.app/)].
+Check out the deployed website at [[https://weatherapp/](https://our-weather-app.vercel.app/)].
 
 ## Contributing
 

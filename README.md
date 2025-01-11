@@ -63,7 +63,7 @@ npm start
 
 ## Website
 
-Check out the deployed website at [[weatherapp](https://our-weather-app.vercel.app/)].
+Check out the deployed website at [[nimbusnow](https://nimbusnow.vercel.app/)].
 
 ## Contributing
 

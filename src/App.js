@@ -163,7 +163,7 @@ const App = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowNote(false);
-    }, 5000);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);

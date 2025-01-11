@@ -14,7 +14,7 @@ const Notification = ({ show }) => {
       }}
     >
       <p className="text-sm font-medium">
-        Please enter both location name and country name in respective fields
+        Enter the location and country names correctly in their fields
       </p>
     </div>
   );
